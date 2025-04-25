@@ -1,18 +1,18 @@
+import Time from './time.js';
 import express from "express";
 
 const app = express();
-const port = 3000;
 
-app.get('/', (req, res) =>  {
-    res.send('Bienvenido a mi servidor');
-})
-app.get('/hora', (req, res) =>  {
-    res.send();gitv 
-    res.send();
-})
+app.get('/', (req, res) => {
+  res.send('¡Bienvenido al servidor Express!');
+});
 
-app.listen(port, () => {
-    console.log(`Listening on http://localhost:${port}`)
-})
+app.get('/hora', (req, res) => {
+  res.send(Time.obtenerHoraActual());
+});
 
+app.get('/fecha-completa', (req, res) => {
+  res.send(Time.obtenerFechaCompleta());
+});
 
+export default app

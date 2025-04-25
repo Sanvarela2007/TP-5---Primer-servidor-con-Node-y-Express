@@ -1,19 +1,7 @@
-import { obtenerHoraActual, obtenerFechaCompleta } from './time.js' 
+import app from './src/app.js'
 
-const app = express();
+const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send('Bienvenido a mi servidor');
-});
-
-app.get('/hora', (req, res) => {
-    res.send(obtenerHoraActual());
-});
-
-app.get('/fecha-completa', (req, res) => {
-    res.send(obtenerFechaCompleta());
-});
-
-export default app;
-
-//hfbofips
+app.listen(port, () => {
+    console.log(` Listening on http://localhost:${port}`)
+})
