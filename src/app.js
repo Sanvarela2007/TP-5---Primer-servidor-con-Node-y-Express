@@ -7,9 +7,7 @@ app.get('/', (req, res) =>  {
     res.send('Bienvenido a mi servidor');
 })
 app.get('/hora', (req, res) =>  {
-    res.send();
-})
-app.get('/fecha-completa', (req, res) =>  {
+    res.send();gitv 
     res.send();
 })
 
